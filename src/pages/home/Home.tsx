@@ -1,7 +1,4 @@
-// import image1 from "../../assets/images/background-1.png"
-// import image2 from "../../assets/images/image-2.png"
 import image3 from "../../assets/images/image-3.png"
-// import image4 from "../../assets/images/image-4.png"
 import image5 from "../../assets/images/image-5.png"
 import iconCalender from "../../assets/images/eva_calendar-fill.png"
 import iconSofa from "../../assets/images/mdi_sofa.png"
@@ -28,16 +25,26 @@ import unsplash5 from "../../assets/images/unsplash5.png"
 import unsplash4 from "../../assets/images/unsplash4.png"
 import unsplash2 from "../../assets/images/unsplash2.png"
 import arrowLeftLink from "../../assets/images/arrowLeft.png"
+import iconFilter from "../../assets/images/eva_search-fill.png"
+import arrowForward from "../../assets/images/eva_arrow-forward-fill.png"
+import iconPerson from "../../assets/images/eva_people-fill.png"
+import iconAdd from "../../assets/images/eva_plus-fill.png"
+import iconRemove from "../../assets/images/eva_minus-fill.png"
 import { NavLink } from "react-router-dom"
+import CustomButton from "../../components/CustomButtont"
+import InformationCard from "../../components/InformationCard"
+import CustomSearch from "../../components/CustomeSearch"
+import CustomHeader from "../../components/CustomHeader"
 
 const Home = () => {
     return(
-        <div className="grid grid-cols-1 gap-y-10 md:gap-y-16">
-            <div className="relative overflow-hidden bg-center bg-cover bg-background3 p-2 lg:px-[100px]">
-                <div className="bg-white flex justify-start flex-col gap-1 mt-6 p-2 lg:p-4  rounded-tr-3xl rounded-br-3xl w-40">
-                    <span className="font-semibold text-md lg:text-2xl">We rent your property</span>
+        <div className="grid grid-cols-1 gap-y-10 md:gap-y-16 lg:gap-y-24">
+            <div className="relative flex flex-col justify-between overflow-hidden bg-center h-[200px] md:h-[300px] lg:h-[400px] bg-cover bg-background3 p-2 lg:px-[100px]">
+                <div className="bg-white flex justify-start flex-col gap-1 mt-2 p-2 lg:p-4  rounded-tr-3xl rounded-br-3xl w-40 md:w-56">
+                    <span className="font-semibold text-sm lg:text-2xl">We rent your property</span>
                     <p className="text-[10px] md:text-sm max-w-40 lg:max-w-[400px]">Vel mattis integer pulvinar morbi quis amet eu. In nunc facilisis proin fermentum, consectetur cursus. </p>
                 </div>
+                <CustomSearch />
             </div>
             <div className="grid grid-cols-1 px-2 md:grid-cols-2 lg:px-[100px]">
                 <div className="grid grid-cols-2">
@@ -51,38 +58,41 @@ const Home = () => {
                     <p className="text-sm text-center max-w-80">We believe in a world where finding a home is just a click away. Whether you’re selling your home, travelling for work or moving to a new city.  Just bring your bags, and we’ll handle the rest.</p>
                 </div>
             </div>
-            <div className="grid grid-cols-1 px-2 gap-y-3 lg:px-[100px]">
-                <div className="flex flex-col justify-center items-center md:px-20">
-                    <h1 className="font-semibold text-center md:text-lg">Id aliquam molestie nunc quis turpis imperdiet quis</h1>
-                    <p className="text-sm text-center">Euismod condimentum tempus quis nibh. Accumsan imperdiet non vulputate venenatis, lorem amet, purus amet, sagittis. Cum orci quam enim adipiscing interdum purus.</p>
-                </div>
+            <div className="grid grid-cols-1 px-2 gap-3 lg:gap-10 lg:px-[100px]">
+                <CustomHeader 
+                    header="Id aliquam molestie nunc quis turpis imperdiet quis"
+                    subHeader="Euismod condimentum tempus quis nibh. Accumsan imperdiet non vulputate venenatis, lorem amet, purus amet, sagittis. Cum orci quam enim adipiscing interdum purus."
+                />
                 <div className="grid grid-cols-1 gap-y-3 md:grid-cols-4 gap-x-3">
-                    <div className="bg-[#E2F1E8] rounded-xl py-4 px-6">
-                        <img src={iconCalender} alt="calender-icon" className="my-2 h-8"/>
-                        <h5 className="font-semibold text-lg">Flexible living</h5>
-                        <p className="text-sm">Stay as Long or as little as you need with month-to-month contracts</p>
-                    </div>
-                    <div className="bg-[#E2F1E8] rounded-xl py-4 px-6">
-                        <img src={iconSofa} alt="calender-icon" className="my-2 h-8"/>
-                        <h5 className="font-semibold text-lg">Move-in ready</h5>
-                        <p className="text-sm">Ready to move in with everything you need</p>
-                    </div>
-                    <div className="bg-[#E2F1E8] rounded-xl py-4 px-6">
-                        <img src={iconWifi} alt="calender-icon" className="my-2 h-8"/>
-                        <h5 className="font-semibold text-lg">Flexible living</h5>
-                        <p className="text-sm">Stay as Long or as little as you need with month-to-month contracts</p>
-                    </div>
-                    <div className="bg-[#E2F1E8] rounded-xl py-4 px-6">
-                        <img src={iconMessage} alt="calender-icon" className="my-2 h-8"/>
-                        <h5 className="font-semibold text-lg">Flexible living</h5>
-                        <p className="text-sm">Stay as Long or as little as you need with month-to-month contracts</p>
-                    </div>
+                    <InformationCard 
+                        header="Flexible living" 
+                        content="Stay as Long or as little as you need with month-to-month contracts"
+                        image={iconCalender}
+                    />
+                    <InformationCard 
+                        header="Move-in ready" 
+                        content="Ready to move in with everything you need"
+                        image={iconSofa}
+                    />
+                    <InformationCard 
+                        header="High-speed Wi-Fi" 
+                        content="Best in class internet speeds suitable for working from home"
+                        image={iconWifi}
+                    />
+                    <InformationCard 
+                        header="24/7 support" 
+                        content="On hand team for any issues you have"
+                        image={iconMessage}
+                    />
                 </div>
 
             </div>
-            <div className="grid grid-cols-1 px-2 gap-y-3 lg:px-[100px]">
-                <h2 className="font-semibold text-center md:text-2xl">Choose your location</h2>
-                <div className="grid grid-cols-1 gap-3 md:grid-cols-4">
+            <div className="grid grid-cols-1 px-2 gap-y-3 lg:px-[100px] lg:gap-10">
+                <CustomHeader 
+                    header="Choose your location"
+                    subHeader=""
+                />
+                <div className="grid grid-cols-1 gap-3 md:grid-cols-4 lg:grid-cols-6">
                     <div className="flex flex-col gap-y-1">
                         <h6 className="font-medium text-center">Shoreditch</h6>
                         <img src={place1} alt="place-1" className="object-cover h-48 rounded-xl"/>
@@ -107,55 +117,47 @@ const Home = () => {
                         <h6 className="font-medium text-center">Hammersmith</h6>
                         <img src={place6} alt="place-1" className="object-cover h-48 rounded-xl"/>
                     </div>
-                    <div className="flex items-center justify-center">
-                        <button
-                            className="text-white bg-[#064749] py-2 px-4 rounded-2xl text-sm"
-                        >
-                            View all spaces
-                        </button>
-                    </div>
+                </div>
+                <div className="flex items-center justify-center">
+                    <CustomButton description="View all spaces"/>
                 </div>
             </div>
-            <div className="relative overflow-hidden rounded-lg bg-center w-full bg-cover p-12  bg-hero flex flex-col gap-y-3 lg:px-[100px]">
-                <h5 className="font-semibold text-white">Bespoke spaces</h5>
+            <div className="relative overflow-hidden bg-center w-full bg-cover p-12  bg-hero flex flex-col gap-y-3 lg:px-[100px]">
+                <h5 className="font-semibold text-white lg:text-3xl">Bespoke spaces</h5>
                 <p className="text-sm text-white">Expertly designed to create extraordinary spaces with the flexible renter in mind</p>
                 <div className="my-2">
-                    <button
-                            className="text-white bg-[#064749] py-2 px-4 rounded-2xl text-sm"
-                    >
-                        Start booking
-                    </button>
+                    <CustomButton description="Start booking"/>
                 </div>
             </div>
-            <div className="grid grid-cols-1 px-2 gap-y-3 lg:px-[100px]">
-                <div className="flex flex-col gap-y-1 md:px-20">
-                    <h2 className="font-semibold text-center md:text-2xl">Corporate Partnerships</h2>
-                    <p className="text-sm text-center">We work with 100+  companies to meet accommodation needs in London. Offer a dedicated booking manager that can help to find properties for your needs.</p>
-                </div>
+            <div className="grid grid-cols-1 px-2 gap-y-3 lg:px-[100px] lg:gap-10">
+                <CustomHeader 
+                    header="Corporate Partnerships"
+                    subHeader="We work with 100+  companies to meet accommodation needs in London. Offer a dedicated booking manager that can help to find properties for your needs."
+                />
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                    <div className="bg-[#E2F1E8] rounded-xl py-4 px-6">
-                        <img src={iconSearch} alt="calender-icon" className="my-2 h-8"/>
-                        <h5 className="font-semibold text-lg">Booking manager </h5>
-                        <p className="text-sm">We do the searching for you</p>
-                    </div>
-                    <div className="bg-[#E2F1E8] rounded-xl py-4 px-6">
-                        <img src={iconPeople} alt="calender-icon" className="my-2 h-8"/>
-                        <h5 className="font-semibold text-lg">Account manager </h5>
-                        <p className="text-sm">Preferred partner rates</p>
-                    </div>
-                    <div className="bg-[#E2F1E8] rounded-xl py-4 px-6">
-                        <img src={iconFile} alt="calender-icon" className="my-2 h-8"/>
-                        <h5 className="font-semibold text-lg">Flexible terms</h5>
-                        <p className="text-sm">Extend on short notice</p>
-                    </div>
+                    <InformationCard 
+                        header="Booking manager"
+                        content="We do the searching for you"
+                        image={iconSearch}
+                    />
+                    <InformationCard 
+                        header="Account manager"
+                        content="Preferred partner rates"
+                        image={iconPeople}
+                    />
+                    <InformationCard 
+                        header="Flexible terms<"
+                        content="Extend on short notice"
+                        image={iconFile}
+                    />
                 </div>
 
             </div>
-            <div className="grid grid-cols-1 px-2 gap-y-3 lg:px-[100px]">
-                <div className="flex flex-col gap-y-1">
-                    <h2 className="font-semibold text-center md:text-2xl">What our partners think</h2>
-                    <p className="text-sm text-center">See what our partners say about us</p>
-                </div>
+            <div className="grid grid-cols-1 px-2 gap-y-3 lg:px-[100px] lg:gap-10">
+                <CustomHeader 
+                    header="What our partners think"
+                    subHeader="See what our partners say about us"
+                />
                <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
                     <div className="bg-[#F2F0F2] p-5 rounded-lg flex flex-col gap-y-2">
                         <div className="flex gap-x-2 items-center">
@@ -203,8 +205,11 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="grid grid-cols-1 px-2 gap-y-3 lg:px-[100px]">
-                <h1 className="font-semibold text-center text-2xl">Read our blog</h1>
+            <div className="grid grid-cols-1 px-2 gap-y-3 lg:px-[100px] lg:gap-10">
+                <CustomHeader 
+                    header="Read our blog"
+                    subHeader=""
+                />
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
                     <div className="flex flex-col">
                         <img src={unsplash} alt="image3"/>
@@ -261,17 +266,13 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex items-center justify-center">
-                        <button
-                            className="text-white bg-[#064749] py-2 px-4 rounded-2xl text-sm"
-                        >
-                            Read More
-                        </button>
-                    </div>
+                </div>
+                <div className="flex items-center justify-center">
+                    <CustomButton  description="Read More"/>
                 </div>
             </div>
-            <div className="grid grid-cols-1 px-2 gap-y-3 lg:px-[100px]">
-                <h1 className="font-semibold text-center text-2xl">Useful links</h1>
+            <div className="grid grid-cols-1 px-2 gap-y-3 lg:px-[100px] lg:gap-10">
+                <h1 className="font-semibold text-center text-2xl lg:text-3xl">Useful links</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:grid-cols-3">
                     <div className="flex justify-between items-center">
                         <NavLink to={"/"} className="text-[#064749] underline font-semibold">West London Apartments</NavLink>

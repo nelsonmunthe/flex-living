@@ -3,6 +3,8 @@ import logo from "../assets/images/Logo.png"
 import navigationMenu from "../assets/images/menu-navigation.png"
 import closeMenu from "../assets/images/close-menu.png"
 import { NavLink } from "react-router-dom"
+import { CustomNavLinkProps } from "../intefrace/common"
+import CustomNavLink from "./CustomNavLink"
 
 const Navigation = () => {
     const [menu, setMenu] = useState<boolean>(false);
@@ -11,20 +13,44 @@ const Navigation = () => {
         setMenu(prev => !prev)
     }
 
+    const links :CustomNavLinkProps[] = [
+        {
+            description: "Home",
+            path: "/"
+        },
+        {
+            description: "Landloards",
+            path: "/Landloards"
+        },
+        {
+            description: "Blog",
+            path: "/blog"
+        },
+        {
+            description: "Booking",
+            path: "/booking"
+        },
+        {
+            description: "Contact",
+            path: "/contact"
+        }
+    ]
+
     return(
-    <nav className="sticky top-0 z-50 bg-white">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
-                <div className="absolute inset-y-0 left-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <div className="absolute inset-y-0 left-0 flex items-center sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                     <img className="h-8 w-auto"  src={logo} alt="company logo"/>
                 </div>
                 <div className="flex flex-1 items-center justify-end">
                     <div className="hidden sm:ml-6 sm:block">
                         <div className="flex space-x-4 ">
-                            <NavLink to="#" className="rounded-md px-3 py-2 text-sm font-medium text-white" aria-current="page">Dashboard</NavLink>
-                            <NavLink to="#" className="rounded-md px-3 py-2 text-sm font-medium text-[#181A18] hover:bg-gray-700">Team</NavLink>
-                            <NavLink to="#" className="rounded-md px-3 py-2 text-sm font-medium text-[#181A18] hover:bg-gray-700">Projects</NavLink>
-                            <NavLink to="#" className="rounded-md px-3 py-2 text-sm font-medium text-[#181A18] hover:bg-gray-700">Calendar</NavLink>
+                           {
+                                links.map(item => {
+                                    return <CustomNavLink description={item.description} path={item.path}/>
+                                })
+                           }
                         </div>
                     </div>
                 </div>
@@ -62,10 +88,11 @@ const Navigation = () => {
         {/* <!-- Mobile menu, show/hide based on menu state. --> */}
         { menu && <div className="sm:hidden" id="mobile-menu">
                 <div className="space-y-1 px-2 pb-3 pt-2">
-                    <NavLink to={""} className="block rounded-md px-3 py-2 text-base font-medium text-[#181A18] hover:bg-gray-50 text-center" aria-current="page">Dashboard</NavLink>
-                    <NavLink to="#" className="block rounded-md px-3 py-2 text-base font-medium text-[#181A18] hover:bg-gray-50 text-center ">Team</NavLink>
-                    <NavLink to="#" className="block rounded-md px-3 py-2 text-base font-medium text-[#181A18] hover:bg-gray-50 text-center">Projects</NavLink>
-                    <NavLink to="#" className="block rounded-md px-3 py-2 text-base font-medium text-[#181A18] hover:bg-gray-50 text-center">Calendar</NavLink>
+                    <NavLink to="/" className="block rounded-md px-3 py-2 text-base font-medium text-[#181A18] hover:bg-gray-200 text-center" aria-current="page">Home</NavLink>
+                    <NavLink to="/landloards" className="block rounded-md px-3 py-2 text-base font-medium text-[#181A18] hover:bg-gray-200 text-center" aria-current="page">Landloards</NavLink>
+                    <NavLink to="#" className="block rounded-md px-3 py-2 text-base font-medium text-[#181A18] hover:bg-gray-200 text-center ">Team</NavLink>
+                    <NavLink to="#" className="block rounded-md px-3 py-2 text-base font-medium text-[#181A18] hover:bg-gray-200 text-center">Projects</NavLink>
+                    <NavLink to="#" className="block rounded-md px-3 py-2 text-base font-medium text-[#181A18] hover:bg-gray-200 text-center">Calendar</NavLink>
                 </div>
             </div>
         }
