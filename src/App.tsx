@@ -5,6 +5,7 @@ import RootLayout from './pages/RootLayout';
 import Landlord from './pages/landLord/LandLord';
 import ErrorPage from './pages/ErrorPage';
 import Blog from './pages/blog/Blog';
+import Booking from './pages/booking/Booking';
 
 const router = createBrowserRouter(
   [
@@ -25,6 +26,10 @@ const router = createBrowserRouter(
         {
           path: "/blog",
           element: <Blog />
+        },
+        {
+          path: "/booking",
+          element: <Booking />
         }
       ]
     }
