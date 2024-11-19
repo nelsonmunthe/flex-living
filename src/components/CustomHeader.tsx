@@ -1,6 +1,6 @@
 type CustomHeaderProps = {
     header: string,
-    subHeader: string
+    subHeader?: string
 }
 
 const CustomHeader = ({header, subHeader}:CustomHeaderProps) => {

@@ -8,7 +8,7 @@ import CustomButton from "./CustomButtont"
 
 const CustomSearch = () => {
     return(
-        <div className=" items-center grid grid-cols-3 bg-white gap-1 sm:gap-2 rounded-3xl border-2 border-[#49735A] lg:mx-20">
+        <div className=" items-center grid grid-cols-3 bg-white gap-1 sm:gap-2 rounded-3xl border-2 border-[#49735A] lg:mx-[250px]">
             <div className="flex gap-1 items-center border-r border-r-[#49735A]">
                 <img src={iconFilter} alt="icon-searching" className="h-3 sm:h-5"/>
                 <input 
@@ -31,7 +31,10 @@ const CustomSearch = () => {
                 <img src={iconAdd} alt="icon-arrow-left" className="h-3 sm:h-5"/>
                 <span className="text-[8px] sm:text-sm">1</span>
                 <img src={iconRemove} alt="icon-arrow-left" className="h-3 sm:h-5"/>
-                <CustomButton description="Search"/>
+                <CustomButton 
+                    description="Search"
+                    styling="text-white bg-buttonBackground py-2 px-4 rounded-2xl text-[10px] md:text-sm font-semibold"    
+                />
             </div>
         </div>
     )

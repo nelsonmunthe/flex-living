@@ -301,7 +301,7 @@ const Landlord = () => {
                 </div>
             </div>
             <div className="grid grid-cols-1 items-center gap-3 px-2 lg:px-[100px]">
-                <span className="text-center text-3xl">Frequently Asked Questions</span>
+                <CustomHeader header="Frequently Asked Questions"/>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-4">
                     <div className="flex flex-col gap-2">
                         <div className="flex justify-between gap-x-2">

@@ -6,6 +6,7 @@ import Landlord from './pages/landLord/LandLord';
 import ErrorPage from './pages/ErrorPage';
 import Blog from './pages/blog/Blog';
 import Booking from './pages/booking/Booking';
+import PropertyDetail from './pages/propertyDetail/propertyDetail';
 
 const router = createBrowserRouter(
   [
@@ -30,6 +31,10 @@ const router = createBrowserRouter(
         {
           path: "/booking",
           element: <Booking />
+        },
+        {
+          path: "/detail",
+          element: <PropertyDetail />
         }
       ]
     }
