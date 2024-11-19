@@ -15,7 +15,7 @@ const CustomButton = (
     
     return(
         <button
-            className={styling ? styling : 'text-white bg-buttonBackground py-2 px-4 rounded-2xl text-sm'}
+            className={styling ? styling : 'text-white bg-buttonBackground py-2 px-4 rounded-2xl text-sm font-semibold'}
             onClick={onHandleClick}
             type={type ?? 'button'}
         >
