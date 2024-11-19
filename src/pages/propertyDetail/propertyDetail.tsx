@@ -86,8 +86,11 @@ const PropertyDetail = () => {
     return(
         <div className="grid grid-cols-1 gap-y-10 md:gap-y-16 lg:gap-y-10 px-2">
             <div className="hidden sm:grid grid-cols-12 gap-3 lg:px-[150px]">
-                <div className="col-span-7">
+                <div className="relative col-span-7">
                     <img  src={detailImage6} alt="image-1" className="object-cover h-full rounded-lg" />
+                    <div className="absolute bottom-2 left-4">
+                        <CustomButton description="View all photos"/>
+                    </div>
                 </div>
 
                 <div className="col-span-5 grid grid-cols-2 gap-1">
