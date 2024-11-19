@@ -100,12 +100,22 @@ const Booking = () => {
         <div className="grid grid-cols-1 gap-y-10 md:gap-y-16 lg:gap-y-10 px-2">
             <div className="flex flex-col gap-3">
                 <CustomSearch />
-                <div className="grid grid-cols-3 gap-2 lg:mx-[250px]">
-                    <CustomButton description="Parking"/>
-                    <select name="" id="" className="text-[#49735A] p-2 border border-[#49735A] text-sm rounded-2xl bg-white">
+                <div className="grid grid-cols-3 sm:grid-cols-6  md:grid-cols-8 lg:grid-cols-8 gap-2 lg:mx-[250px]">
+                    <div className="grid col-span-1">
+                        <CustomButton description="Parking"/>
+                    </div>
+                    <select 
+                        name="" 
+                        id="" 
+                        className="text-[#49735A] p-2 border border-[#49735A] text-sm rounded-2xl bg-white col-span-1"
+                    >
                         <option value="">Bedrooms</option>
                     </select>
-                    <select name="" id="" className="text-[#49735A] p-2 border border-[#49735A] text-sm rounded-2xl bg-white">
+                    <select 
+                        name="" 
+                        id="" 
+                        className="text-[#49735A] p-2 border border-[#49735A] text-sm rounded-2xl bg-white col-span-1"
+                    >
                         <option value="">Bathrooms</option>
                     </select>
                 </div>
