@@ -135,7 +135,7 @@ const PropertyDetail = () => {
                         <p className="text-sm">Laoreet risus accumsan pellentesque lacus, in nulla eu elementum. Mollis enim fringilla aenean diam tellus diam morbi ipsum placerat.  </p>
                     </div>
                 </div>
-                <div className="col-span-12 sm:col-span-6 lg:col-span-5 flex justify-start flex-col gap-3 lg:gap-4 bg-[#F2F0F2] rounded-lg p-4 lg:px-8">
+                <div className="col-span-12 sm:col-span-6 lg:col-span-5 flex justify-start flex-col gap-3 lg:gap-4 bg-[#F2F0F2] rounded-3xl p-4 lg:px-8">
                     <h3 className="font-semibold text-center">£3990 / Month</h3>
                     <div className="flex items-center  gap-x-8">
                         <div className="flex flex-col gap-2">
