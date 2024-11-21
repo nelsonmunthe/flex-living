@@ -97,8 +97,8 @@ const Booking = () => {
     ]
    
     return(
-        <div className="grid grid-cols-1 gap-y-10 md:gap-y-16 lg:gap-y-10 px-2">
-            <div className="flex flex-col gap-3">
+        <article className="grid grid-cols-1 gap-y-10 md:gap-y-16 lg:gap-y-10 px-2">
+            <section className="flex flex-col gap-3">
                 <CustomSearch />
                 <div className="grid grid-cols-3 sm:grid-cols-6  md:grid-cols-8 lg:grid-cols-8 gap-2 lg:mx-[250px]">
                     <div className="grid col-span-1">
@@ -128,8 +128,8 @@ const Booking = () => {
                         </select>
                     </div>
                 </div>
-            </div>
-            <div className="grid grid-cols-12 items-center gap-3 px-2 lg:px-[100px]">
+            </section>
+            <section className="grid grid-cols-12 items-center gap-3 px-2 lg:px-[100px]">
                 <div className="col-span-12 sm:col-span-7  flex justify-start sm:order-last sm:h-full">
                     <MyMap />
                 </div>
@@ -140,7 +140,7 @@ const Booking = () => {
                                 return <div className="grid grid-cols-12">
                                     <img src={item.coverImage} alt={`image-${index}`} className="object-cover w-full h-full col-span-3"/>
                                     <div className="flex flex-col gap-1 w-full col-span-9 p-2 bg-[#F2F0F2] rounded-tr-2xl rounded-br-2xl">
-                                        <h6 className="font-semibold">Rhoncus suspendisse penatibus mauris, sit non</h6>
+                                        <span className="font-semibold">Rhoncus suspendisse penatibus mauris, sit non</span>
                                         <div className="flex gap-2 items-center">
                                             <div className="gap-1 flex">
                                                 <img src={iconBedRoom} className="h-4"/>
@@ -176,14 +176,14 @@ const Booking = () => {
                         <CustomButton description="Show more apartments"/>
                     </div>
                 </div>
-            </div>
-            <div className="grid grid-cols-1 items-center gap-3 px-2 lg:px-[100px]">
+            </section>
+            <section className="grid grid-cols-1 items-center gap-3 px-2 lg:px-[100px]">
                 <CustomHeader header="Apartments for rent in London"/>
                 <p className="text-sm">A truly global city, London has long been considered a cutting-edge metropolis and hub for culture, style and finance. With each borough, Tube zone and neighborhood of London sporting its own vibe and lifestyle advantages, it can be downright difficult to settle on where to look for a furnished apartment in London . Whether you’re a digital nomad looking for a studio apartment in London or just seeking a month to month rental in London, Blueground has you covered. With a pub on almost every corner and beautiful parks in all major neighborhoods, you’ll feel right at home across all of Blueground’s exquisite London flats.</p>
                 <p className="text-sm">Furnished apartment rentals in London. Getting the most out of living in London starts with securing a furnished flat for rent. Fortunately, Blueground’s flats for rent across London marry convenient locations close to public transportation, top notch interiors and modern furnishings, and support from our local team. Zero in on the ideal serviced apartment in London from studios to two-bedroom apartments by filtering for your date, area, and must-have amenities on our site. Moving to London has never been simpler!</p>
                 <p className="text-sm">The choice is yours from Chelsea to Soho to Shoreditch, always within a short walk from Tube stops and local hangouts. Show up and start living in your new London accommodation with furnishings and a fully-equipped setup taken care of before your arrival by the team at Blueground. So book today, and move in tomorrow so you can enjoy all a Blueground London flat has to offer: premium work from home setups, a user-friendly guest app service, flexible contracts, and a booking process free of broker’s fees (and stresses!).</p>
-            </div>
-            <div className="grid grid-cols-1 items-center gap-3 px-2 lg:px-[100px]">
+            </section>
+            <section className="grid grid-cols-1 items-center gap-3 px-2 lg:px-[100px]">
                 <CustomHeader header="Frequently Asked Questions"/>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-4">
                     <div className="flex flex-col gap-2">
@@ -249,8 +249,8 @@ const Booking = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+        </article>
     )
 }
 

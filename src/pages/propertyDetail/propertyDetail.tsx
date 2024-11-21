@@ -142,6 +142,8 @@ const PropertyDetail = () => {
                             <label htmlFor="Move in" className="text-sm font-semibold">Move in</label>
                             <input 
                                 type="date"
+                                required
+                                name="start-date"
                                 className="rounded-lg p-1"
                             />
                         </div>
@@ -149,6 +151,8 @@ const PropertyDetail = () => {
                             <label htmlFor="Move in" className="text-sm font-semibold">Move out</label>
                             <input 
                                 type="date"
+                                required
+                                name="end-date"
                                 className="rounded-lg p-1"
                             />
                         </div>

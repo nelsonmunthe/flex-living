@@ -77,69 +77,81 @@ const Landlord = () => {
     ]
 
     return(
-        <div className="grid grid-cols-1 gap-y-10 md:gap-y-16 lg:gap-y-24">
-            <div className="flex justify-center sm:justify-end overflow-hidden bg-center px-5  bg-cover bg-coverLandLord py-5 md:py-10 lg:px-[100px]">
-                <div className="bg-gray-300 flex flex-col gap-3 md:gap-4 items-center justify-center  rounded-xl p-2 md:p-4 opacity-[0.7]">
-                    <CustomHeader 
-                        header="Earn more from your property, do less"
-                        subHeader="Find out if your property meets our criteria"
-                    />
+        <article className="grid grid-cols-1 gap-y-10 md:gap-y-16 lg:gap-y-24">
+            <section className="flex justify-center sm:justify-end overflow-hidden bg-center px-5  bg-cover bg-coverLandLord py-5 md:py-10 lg:px-[100px]">
+                <form 
+                    className="bg-gray-300 flex flex-col gap-3 md:gap-4 items-center justify-center  rounded-xl p-2 md:p-4 opacity-[0.7]"
+                    onClick={(event) => {
+                        event.preventDefault()
+                    }}
+                >
+                    <div className="flex flex-col justify-center items-center gap-1 lg:my-4 lg:px[300px]">
+                        <h1 className="font-semibold text-xl text-center lg:text-3xl">Earn more from your property, do less</h1>
+                        <p className="text-sm text-center lg:max-w-[600px]">Find out if your property meets our criteria</p>
+                    </div>
+
                     <input 
                         type="text"
+                        name="name"
+                        required
                         placeholder="Name *"
                         className="text-sm bg-white px-2 lg:p-2 rounded-md w-full"
                     />
                     <input 
-                        type="text"
+                        type="email"
+                        name="email"
+                        required
                         placeholder="Email *"
                         className="text-sm bg-white px-2 lg:p-2 rounded-md w-full"
                     />
                     <input 
                         type="text"
+                        name="phone_number"
+                        required
                         placeholder="Phone Number *"
                         className="text-sm bg-white px-2 lg:p-2 rounded-md w-full"
                     />
                     <div className="grid grid-cols-1 gap-3 w-full">
                         <span className="text-sm font-semibold text-start">Property details</span>
-                        <select name="" id="" className="w-full p-1 lg:p-2 bg-white rounded-md px-2">
+                        <select required name="area" id="" className="w-full p-1 lg:p-2 bg-white rounded-md px-2">
                             <option value="" className="w-full">Area *</option>
                         </select>
-                        <select name="" id="" className="w-full p-1 lg:p-2 bg-white rounded-md px-2">
+                        <select required name="bedroom" id="" className="w-full p-1 lg:p-2 bg-white rounded-md px-2">
                             <option value="" className="w-full"># of bedrooms *</option>
                         </select>
                     </div>
-                    <CustomButton description="Submit"/>
-                </div>
-            </div>
-            <div className="grid grid-cols-1 gap-3 px-2 lg:px-[100px]">
+                    <CustomButton description="Submit" type="submit"/>
+                </form>
+            </section>
+            <section className="grid grid-cols-1 gap-3 px-2 lg:px-[100px]">
                 <CustomHeader 
                     header="Better than Property Management"
                     subHeader="We work with 100+  companies to meet accommodation needs in London. Offer a dedicated booking manager that can help to find properties for your needs."
                 />
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
                     <div className="grid grid-cols-1 gap-3 bg-[#F2F0F2] py-4 px-6 rounded-xl">
-                        <h5 className="font-semibold text-lg">Guaranteed rent</h5>
+                        <h3 className="font-semibold text-lg">Guaranteed rent</h3>
                         <p className="text-sm">We do the searching for you</p>
                         <img src={iconLock} className="my-2 h-8" alt="icon-lock"/>
                     </div>
                     <div className="grid grid-cols-1 gap-3 bg-[#F2F0F2] py-4 px-6 rounded-xl">
-                        <h5 className="font-semibold text-lg">No fees</h5>
+                        <h3 className="font-semibold text-lg">No fees</h3>
                         <p className="text-sm">Preferred partner rates</p>
                         <img src={iconLock} className="my-2 h-8" alt="icon-lock"/>
                     </div>
                     <div className="grid grid-cols-1 gap-3 bg-[#F2F0F2] py-4 px-6 rounded-xl">
-                        <h5 className="font-semibold text-lg">No voids</h5>
+                        <h3 className="font-semibold text-lg">No voids</h3>
                         <p className="text-sm">Preferred partner rates</p>
                         <img src={iconApartement} className="my-2 h-8" alt="icon-lock"/>
                     </div>
                     <div className="grid grid-cols-1 gap-3 bg-[#F2F0F2] py-4 px-6 rounded-xl">
-                        <h5 className="font-semibold text-lg">Guaranteed rent</h5>
+                        <h3 className="font-semibold text-lg">Guaranteed rent</h3>
                         <p className="text-sm">We do the searching for you</p>
                         <img src={iconHour} className="my-2 h-8" alt="icon-lock"/>
                     </div>
                 </div>
-            </div>
-            <div className="grid grid-cols-1 px-2  py-4 lg:px-[100px] bg-cardBackground ">
+            </section>
+            <section className="grid grid-cols-1 px-2  py-4 lg:px-[100px] bg-cardBackground ">
                 <h2 className="font-semibold  text-lg text-center lg:text-2xl my-10">How it Works</h2>
                 <div className="flex flex-col sm:hidden">
                     {
@@ -152,7 +164,7 @@ const Landlord = () => {
                                     </div>
                                     <div className="bg-cardBackground rounded-xl px-6 grid grid-cols-1 gap-3">
                                         <img src={item.image} alt="calender-icon" className="h-8"/>
-                                        <h5 className="font-semibold text-lg">{item.header}</h5>
+                                        <h3 className="font-semibold text-lg">{item.header}</h3>
                                         <p className="text-sm">{item.content}</p>
                                     </div>
                                 </div>  
@@ -168,7 +180,7 @@ const Landlord = () => {
                                 <div className="col-span-5 flex justify-center items-center">
                                     <div className={`${index % 2 === 0 ? "" : "hidden"} bg-cardBackground rounded-xl px-6 grid grid-cols-1 gap-3`}>
                                         <img src={item.image} alt="calender-icon" className="h-8"/>
-                                        <h5 className="font-semibold text-lg">{item.header}</h5>
+                                        <h3 className="font-semibold text-lg">{item.header}</h3>
                                         <p className="text-sm">{item.content}</p>
                                     </div>
                                 </div>
@@ -179,7 +191,7 @@ const Landlord = () => {
                                 <div className="col-span-5 flex justify-center items-center">
                                     <div className={`${index % 2 === 0 ? "hidden" : ""} bg-cardBackground rounded-xl px-6 grid grid-cols-1 gap-3`}>
                                         <img src={item.image} alt="calender-icon" className="h-8"/>
-                                        <h5 className="font-semibold text-lg">{item.header}</h5>
+                                        <h3 className="font-semibold text-lg">{item.header}</h3>
                                         <p className="text-sm">{item.content}</p>
                                     </div>
                                 </div>
@@ -187,8 +199,8 @@ const Landlord = () => {
                         )
                     })
                 }
-            </div>
-            <div className="grid grid-cols-1 gap-3 px-2  lg:px-[100px]">
+            </section>
+            <section className="grid grid-cols-1 gap-3 px-2  lg:px-[100px]">
                 <CustomHeader 
                     header="Corporate Partnerships" 
                     subHeader="We work with 100+  companies to meet accommodation needs in London. Offer a dedicated booking manager that can help to find properties for your needs."
@@ -212,7 +224,7 @@ const Landlord = () => {
                         coorporatePartnerShip.map(item => {
                             return(
                                 <div className="flex flex-col justify-center items-center gap-3">
-                                    <h5 className="font-semibold text-lg">{item.header}</h5>
+                                    <h3 className="font-semibold text-lg">{item.header}</h3>
                                     <p className="text-sm text-center">{item.content}</p>
                                     <img src={item.image} alt="calender-icon" className="my-2 h-8"/>
                                 </div>
@@ -221,8 +233,8 @@ const Landlord = () => {
                     }
                 </div>
 
-            </div>
-            <div className="grid grid-cols-1 gap-3 px-2 sm:px-[50px]  lg:px-[100px]">
+            </section>
+            <section className="grid grid-cols-1 gap-3 px-2 sm:px-[50px]  lg:px-[100px]">
                 <CustomHeader  
                     header="Pricing" 
                     subHeader="Compare our pricing model to high street agents"
@@ -230,7 +242,7 @@ const Landlord = () => {
                 <div className="grid grid-cols-12 md:px-[20px] lg:px-[100px] gap-3">
                     <div className="col-span-12 sm:col-span-5 border-2 border-gray-300 rounded-xl">
                         <div className="bg-cardBackground flex flex-col justify-center items-center gap-3 py-3 lg:py-10 rounded-t-xl">
-                            <h5 className="font-semibold text-lg">High Street Agents</h5>
+                            <h3 className="font-semibold text-lg">High Street Agents</h3>
                             <span className="text-3xl font-semibold">12%</span>
                             <p>management fee</p>
                         </div>
@@ -266,7 +278,7 @@ const Landlord = () => {
                     </div>
                     <div className="col-span-12 sm:col-span-5 border-2 border-gray-300 rounded-xl">
                         <div className="bg-cardBackground flex flex-col justify-center items-center gap-3 py-3 lg:py-10  rounded-t-xl">
-                            <h5 className="font-semibold text-lg">Flex Living (guaranteed Rental)</h5>
+                            <h3 className="font-semibold text-lg">Flex Living (guaranteed Rental)</h3>
                             <span className="text-3xl font-semibold">Fixed price</span>
                             <p>monthly</p>
                         </div>
@@ -299,8 +311,8 @@ const Landlord = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="grid grid-cols-1 items-center gap-3 px-2 lg:px-[100px]">
+            </section>
+            <section className="grid grid-cols-1 items-center gap-3 px-2 lg:px-[100px]">
                 <CustomHeader header="Frequently Asked Questions"/>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-4">
                     <div className="flex flex-col gap-2">
@@ -366,9 +378,9 @@ const Landlord = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             
-        </div>
+        </article>
     )
 }
 

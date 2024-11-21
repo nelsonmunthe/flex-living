@@ -13,7 +13,7 @@ const CheckoutReview = (
     
     return(
         <div className="flex flex-col w-full  gap-y-3 px-2 py-4">
-            <CustomHeader header="Booking review"/>
+            <h3 className="font-semibold text-xl text-center lg:text-3xl">Booking review"</h3>
             <div className="flex flex-col gap-2 mt-4">
                 <div className="flex justify-between items-center">
                     <label htmlFor="Rent per month" className="font-semibold text-sm">Rent per month</label>

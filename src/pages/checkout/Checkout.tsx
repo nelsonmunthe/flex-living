@@ -17,11 +17,13 @@ const Checkout = () => {
             <div className="flex flex-col  px-2 py-4 sm:justify-start  sm:order-last">
                 <img src={detailImage6} alt="cover" className="rounded-t-lg"/>
                 <div className="bg-[#F2F0F2] flex flex-col gap-3 px-2 py-4 rounded-b-lg">
-                    <div className="flex items-center justify-center sm:justify-start gap-x-8">
+                    <form className="flex items-center justify-center sm:justify-start gap-x-8">
                         <div className="flex flex-col gap-1">
                             <label htmlFor="Move in" className="text-sm font-semibold text-center sm:text-start">Move in</label>
                             <input 
                                 type="date"
+                                name="start-date"
+                                required
                                 className="rounded-lg  bg-[#F2F0F2] text-sm"
                             />
                         </div>
@@ -29,10 +31,12 @@ const Checkout = () => {
                             <label htmlFor="Move in" className="text-sm font-semibold text-center sm:text-start">Move out</label>
                             <input 
                                 type="date"
+                                name="end-date"
+                                required
                                 className="rounded-lg  bg-[#F2F0F2] text-sm"
                             />
                         </div>
-                    </div>
+                    </form>
                     <div className="flex justify-center items-center sm:justify-start gap-4">
                         <span className="font-semibold text-sm">1</span>
                         <div className="flex gap-1 items-center">
@@ -41,7 +45,7 @@ const Checkout = () => {
                         </div>
                     </div>
                     <span className="text-sm  text-center sm:text-start">All utilities are included</span>
-                    <h6 className="text-center font-semibold sm:text-start">Payment timeline</h6>
+                    <span className="text-center font-semibold sm:text-start">Payment timeline</span>
                     <div className="flex flex-col">
                         <div className="flex  gap-3">
                             <div className="flex flex-col items-center">
@@ -50,7 +54,7 @@ const Checkout = () => {
                             </div>
                             <div className="flex flex-1 justify-between gap-y-2">
                                 <div className="flex flex-col">
-                                    <h6 className="text-sm">Reserve this apaptment</h6>
+                                    <span className="text-sm">Reserve this apaptment</span>
                                     <span className="text-[10px]">Due now</span>
                                 </div>
                                 <span className="text-sm">£4001.70</span>
@@ -62,7 +66,7 @@ const Checkout = () => {
                             </div>
                             <div className="flex flex-1 justify-between gap-y-2">
                                 <div className="flex flex-col">
-                                    <h6 className="text-sm">After move-out</h6>
+                                    <span className="text-sm">After move-out</span>
                                     <span className="text-[10px]">Receive your £400.00 deposit back within 30 days</span>
                                 </div>
                                 <img src={iconWarning} alt="icon-warning" className="h-3"/>

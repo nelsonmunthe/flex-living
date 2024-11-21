@@ -158,9 +158,9 @@ const Blog = () => {
     ]
 
     return(
-        <div className="grid grid-cols-1 gap-y-6 md:gap-y-16 lg:gap-y-10 px-2">
-            <h1 className="font-semibold text-3xl  bg-white text-center">Flex Living Insights</h1>
-            <div className="grid grid-cols-5 gap-1 sm:grid-cols-5 lg:px-[200px]">
+        <article className="grid grid-cols-1 gap-y-6 md:gap-y-16 lg:gap-y-10 px-2">
+            <h2 className="font-semibold text-3xl  bg-white text-center">Flex Living Insights</h2>
+            <section className="grid grid-cols-5 gap-1 sm:grid-cols-5 lg:px-[200px]">
                 {
                     subLinks.map(item => {
                         return <NavLink 
@@ -171,8 +171,8 @@ const Blog = () => {
                         </NavLink>
                     })
                 }
-            </div>
-            <div className="flex flex-col gap-5 justify-between sm:justify-end overflow-hidden bg-center px-5  bg-cover bg-coverBLog py-2 md:py-10 lg:px-[100px]">
+            </section>
+            <section className="flex flex-col gap-5 justify-between sm:justify-end overflow-hidden bg-center px-5  bg-cover bg-coverBLog py-2 md:py-10 lg:px-[100px]">
                 <div className="bg-white flex justify-start flex-col gap-1 mt-2 p-2 lg:p-4  rounded-tr-3xl rounded-br-3xl w-40 md:w-56">
                     <span className="font-semibold text-sm lg:text-2xl">We rent your property</span>
                     <p className="text-[10px] md:text-sm max-w-40 lg:max-w-[400px]">Vel mattis integer pulvinar morbi quis amet eu. In nunc facilisis proin fermentum, consectetur cursus. </p>
@@ -185,8 +185,8 @@ const Blog = () => {
                         <img src={arrowRigth}/>
                     </div>
                 </div>
-            </div>
-            <div className="grid grid-cols-1 auto-cols-auto gap-3 lg:px-[150px]">
+            </section>
+            <section className="grid grid-cols-1 auto-cols-auto gap-3 lg:px-[150px]">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 lg:gap-6">
                     {
                         blogs.map(item => {
@@ -215,8 +215,8 @@ const Blog = () => {
                     <CustomButton description="Load more" />
                 </div>
                 
-            </div>
-            <div className="grid grid-cols-1  auto-cols-auto gap-3 lg:gap-6 lg:px-[150px]">
+            </section>
+            <section className="grid grid-cols-1  auto-cols-auto gap-3 lg:gap-6 lg:px-[150px]">
                 <CustomHeader header="Featured posts" subHeader=""/>
                 <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 gap-3 lg:gap-6">
                     {
@@ -245,8 +245,8 @@ const Blog = () => {
                 <div className="flex justify-center items-center">
                     <CustomButton description="Load more" />
                 </div>
-            </div>
-        </div>
+            </section>
+        </article>
     )
 }
 

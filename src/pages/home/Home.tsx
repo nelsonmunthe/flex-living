@@ -33,27 +33,27 @@ import CustomHeader from "../../components/CustomHeader"
 
 const Home = () => {
     return(
-        <div className="grid grid-cols-1 gap-y-10 md:gap-y-16 lg:gap-y-24">
-            <div className="relative flex flex-col justify-between overflow-hidden bg-center h-[200px] md:h-[300px] lg:h-[400px] bg-cover bg-background3 p-2 lg:px-[100px]">
+        <article className="grid grid-cols-1 gap-y-10 md:gap-y-16 lg:gap-y-24">
+            <section className="relative flex flex-col justify-between overflow-hidden bg-center h-[200px] md:h-[300px] lg:h-[400px] bg-cover bg-background3 p-2 lg:px-[100px]">
                 <div className="bg-white flex justify-start flex-col gap-1 mt-2 p-2 lg:p-4  rounded-tr-3xl rounded-br-3xl w-40 md:w-56">
-                    <span className="font-semibold text-sm lg:text-2xl">We rent your property</span>
+                    <h1 className="font-semibold text-sm lg:text-3xl">We rent your property</h1>
                     <p className="text-[10px] md:text-sm max-w-40 lg:max-w-[400px]">Vel mattis integer pulvinar morbi quis amet eu. In nunc facilisis proin fermentum, consectetur cursus. </p>
                 </div>
                 <CustomSearch />
-            </div>
-            <div className="grid grid-cols-1 px-2 md:grid-cols-2 lg:px-[100px]">
+            </section>
+            <section className="grid grid-cols-1 px-2 md:grid-cols-2 lg:px-[100px]">
                 <div className="grid grid-cols-2">
                     <img  src={image3} alt="image-1" className="object-cover rounded-tl-3xl"/>
                     <img  src={image5} alt="image-2" className="object-cover rounded-tr-3xl md:rounded-none"/>
                     <img  src={image3} alt="image-3" className="object-cover md:rounded-bl-3xl"/>
                     <img  src={image5} alt="image-5" className="object-cover"/>
                 </div>
-                <div className="bg-[#F2F0F2] flex flex-col justify-center items-center p-4 gap-y-1 rounded-b-3xl md:rounded-bl-none md:rounded-br-3xl md:rounded-tr-3xl">
-                    <h2 className="font-semibold md:text-lg lg:text-2xl">The future is flexible</h2>
-                    <p className="text-sm text-center max-w-80">We believe in a world where finding a home is just a click away. Whether you’re selling your home, travelling for work or moving to a new city.  Just bring your bags, and we’ll handle the rest.</p>
-                </div>
-            </div>
-            <div className="grid grid-cols-1 px-2 gap-3 lg:gap-10 lg:px-[100px]">
+                <CustomHeader 
+                    header="The future is flexible"
+                    subHeader="We believe in a world where finding a home is just a click away. Whether you’re selling your home, travelling for work or moving to a new city.  Just bring your bags, and we’ll handle the rest."
+                />
+            </section>
+            <section className="grid grid-cols-1 px-2 gap-3 lg:gap-10 lg:px-[100px]">
                 <CustomHeader 
                     header="Id aliquam molestie nunc quis turpis imperdiet quis"
                     subHeader="Euismod condimentum tempus quis nibh. Accumsan imperdiet non vulputate venenatis, lorem amet, purus amet, sagittis. Cum orci quam enim adipiscing interdum purus."
@@ -81,50 +81,50 @@ const Home = () => {
                     />
                 </div>
 
-            </div>
-            <div className="grid grid-cols-1 px-2 gap-y-3 lg:px-[100px] lg:gap-10">
+            </section>
+            <section className="grid grid-cols-1 px-2 gap-y-3 lg:px-[100px] lg:gap-10">
                 <CustomHeader 
                     header="Choose your location"
                     subHeader=""
                 />
                 <div className="grid grid-cols-1 gap-3 md:grid-cols-4 lg:grid-cols-6">
                     <div className="flex flex-col gap-y-1">
-                        <h6 className="font-medium text-center">Shoreditch</h6>
+                        <h3 className="font-medium text-center">Shoreditch</h3>
                         <img src={place1} alt="place-1" className="object-cover h-48 rounded-xl"/>
                     </div>
                     <div className="flex flex-col gap-y-1">
-                        <h6 className="font-medium text-center">City of London</h6>
+                        <h3 className="font-medium text-center">City of London</h3>
                         <img src={place2} alt="place-1" className="object-cover h-48 rounded-xl"/>
                     </div>
                     <div className="flex flex-col gap-y-1">
-                        <h6 className="font-medium text-center">The West End</h6>
+                        <h3 className="font-medium text-center">The West End</h3>
                         <img src={place3} alt="place-1" className="object-cover h-48 rounded-xl"/>
                     </div>
                     <div className="flex flex-col gap-y-1">
-                        <h6 className="font-medium text-center">Kensington</h6>
+                        <h3 className="font-medium text-center">Kensington</h3>
                         <img src={place4} alt="place-1" className="object-cover h-48 rounded-xl"/>
                     </div>
                     <div className="flex flex-col gap-y-1">
-                        <h6 className="font-medium text-center">Kingston-Upon-Thames</h6>
+                        <h3 className="font-medium text-center">Kingston-Upon-Thames</h3>
                         <img src={place5} alt="place-1" className="object-cover h-48 rounded-xl"/>
                     </div>
                     <div className="flex flex-col gap-y-1">
-                        <h6 className="font-medium text-center">Hammersmith</h6>
+                        <h3 className="font-medium text-center">Hammersmith</h3>
                         <img src={place6} alt="place-1" className="object-cover h-48 rounded-xl"/>
                     </div>
                 </div>
                 <div className="flex items-center justify-center">
                     <CustomButton description="View all spaces"/>
                 </div>
-            </div>
-            <div className="relative overflow-hidden bg-center w-full bg-cover p-12  bg-hero flex flex-col gap-y-3 lg:px-[100px]">
-                <h5 className="font-semibold text-white lg:text-3xl">Bespoke spaces</h5>
+            </section>
+            <section className="relative overflow-hidden bg-center w-full bg-cover p-12  bg-hero flex flex-col gap-y-3 lg:px-[100px]">
+                <h2 className="font-semibold text-white lg:text-3xl">Bespoke spaces</h2>
                 <p className="text-sm text-white">Expertly designed to create extraordinary spaces with the flexible renter in mind</p>
                 <div className="my-2">
                     <CustomButton description="Start booking"/>
                 </div>
-            </div>
-            <div className="grid grid-cols-1 px-2 gap-y-3 lg:px-[100px] lg:gap-10">
+            </section>
+            <section className="grid grid-cols-1 px-2 gap-y-3 lg:px-[100px] lg:gap-10">
                 <CustomHeader 
                     header="Corporate Partnerships"
                     subHeader="We work with 100+  companies to meet accommodation needs in London. Offer a dedicated booking manager that can help to find properties for your needs."
@@ -147,8 +147,8 @@ const Home = () => {
                     />
                 </div>
 
-            </div>
-            <div className="grid grid-cols-1 px-2 gap-y-3 lg:px-[100px] lg:gap-10">
+            </section>
+            <section className="grid grid-cols-1 px-2 gap-y-3 lg:px-[100px] lg:gap-10">
                 <CustomHeader 
                     header="What our partners think"
                     subHeader="See what our partners say about us"
@@ -158,7 +158,7 @@ const Home = () => {
                         <div className="flex gap-x-2 items-center">
                             <img src={people1} alt="people 1" />
                             <div className="flex flex-col">
-                                <h6 className="font-semibold">Annie</h6>
+                                <h3 className="font-semibold">Annie</h3>
                                 <span>Landlord in SE1</span>
                             </div>
                         </div>
@@ -170,7 +170,7 @@ const Home = () => {
                         <div className="flex gap-x-2 items-center">
                             <img src={people2} alt="people 1" />
                             <div className="flex flex-col">
-                                <h6 className="font-semibold">Laura</h6>
+                                <h3 className="font-semibold">Laura</h3>
                                 <span>Landlord in SE1</span>
                             </div>
                         </div>
@@ -182,7 +182,7 @@ const Home = () => {
                         <div className="flex gap-x-2 items-center">
                             <img src={people3} alt="people 1" />
                             <div className="flex flex-col">
-                                <h6 className="font-semibold">Gabriel</h6>
+                                <h3 className="font-semibold">Gabriel</h3>
                                 <span>Landlord in SE1</span>
                             </div>
                         </div>
@@ -199,8 +199,8 @@ const Home = () => {
                         <img src={arrowRight} alt="image2"/>
                     </div>
                 </div>
-            </div>
-            <div className="grid grid-cols-1 px-2 gap-y-3 lg:px-[100px] lg:gap-10">
+            </section>
+            <section className="grid grid-cols-1 px-2 gap-y-3 lg:px-[100px] lg:gap-10">
                 <CustomHeader 
                     header="Read our blog"
                     subHeader=""
@@ -265,9 +265,9 @@ const Home = () => {
                 <div className="flex items-center justify-center">
                     <CustomButton  description="Read More"/>
                 </div>
-            </div>
-            <div className="grid grid-cols-1 px-2 gap-y-3 lg:px-[100px] lg:gap-10">
-                <h1 className="font-semibold text-center text-2xl lg:text-3xl">Useful links</h1>
+            </section>
+            <section className="grid grid-cols-1 px-2 gap-y-3 lg:px-[100px] lg:gap-10">
+                <h2 className="font-semibold text-center text-2xl lg:text-3xl">Useful links</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:grid-cols-3">
                     <div className="flex justify-between items-center">
                         <NavLink to={"/"} className="text-[#064749] underline font-semibold">West London Apartments</NavLink>
@@ -306,17 +306,17 @@ const Home = () => {
                         <img src={arrowLeftLink} className="h-3" alt="image21"/>
                     </div>
                 </div>
-            </div>
-            <div className="flex justify-center items-center relative overflow-hidden rounded-lg bg-center w-full bg-cover p-12  bg-background2 gap-y-3 lg:px-[100px]">
+            </section>
+            <section className="flex justify-center items-center relative overflow-hidden rounded-lg bg-center w-full bg-cover p-12  bg-background2 gap-y-3 lg:px-[100px]">
                 <div className="flex flex-col p-6 bg-white rounded-t-3xl rounded-br-3xl gap-y-3 md:max-w-[300px]">
-                    <span className="font-semibold text-2xl">Dictum nunc</span>
+                    <h2 className="font-semibold text-2xl">Dictum nunc</h2>
                     <p className="text-sm">Vel mattis integer pulvinar morbi quis amet eu. In nunc facilisis proin fermentum, consectetur cursus. </p>
                     <select name="" id="" className="w-full p-1 rounded-lg bg-[#064749] text-white text-sm">
                         <option value="choose city" className="text-white text-sm px-2">choose city</option>
                     </select>
                 </div>
-            </div>
-        </div>
+            </section>
+        </article>
     )
 }
 
