@@ -32,31 +32,31 @@ const Booking = () => {
         },
         {
             coverImage: bookingImage2,
-             header: "Rhoncus suspendisse penatibus mauris, sit non",
+            header: "Rhoncus suspendisse penatibus mauris, sit non",
             properties: { bedroom: 1, bath: 1, wifi: true},
             additional: ["City view", "3rd floor", "Elevator", "Parking"],
             availableDate: "28 Nov 2021",
-           price: 3490
+            price: 3490
         },
         {
             coverImage: bookingImage3,
-             header: "Rhoncus suspendisse penatibus mauris, sit non",
+            header: "Rhoncus suspendisse penatibus mauris, sit non",
             properties: { bedroom: 1, bath: 1, wifi: true},
             additional: ["City view", "3rd floor", "Elevator", "Parking"],
             availableDate: "28 Nov 2021",
-           price: 3490
+            price: 3490
         },
         {
             coverImage: bookingImage4,
-             header: "Rhoncus suspendisse penatibus mauris, sit non",
+            header: "Rhoncus suspendisse penatibus mauris, sit non",
             properties: { bedroom: 1, bath: 1, wifi: true},
             additional: ["City view", "3rd floor", "Elevator", "Parking"],
             availableDate: "28 Nov 2021",
-           price: 3490
+            price: 3490
         },
         {
             coverImage: bookingImage5,
-             header: "Rhoncus suspendisse penatibus mauris, sit non",
+            header: "Rhoncus suspendisse penatibus mauris, sit non",
             properties: { bedroom: 1, bath: 1, wifi: true},
             additional: ["City view", "3rd floor", "Elevator", "Parking"],
             availableDate: "28 Nov 2021",
@@ -64,35 +64,35 @@ const Booking = () => {
         },
         {
             coverImage: bookingImage6,
-             header: "Rhoncus suspendisse penatibus mauris, sit non",
+            header: "Rhoncus suspendisse penatibus mauris, sit non",
             properties: { bedroom: 1, bath: 1, wifi: true},
             additional: ["City view", "3rd floor", "Elevator", "Parking"],
             availableDate: "28 Nov 2021",
-           price: 3490
+            price: 3490
         },
         {
             coverImage: bookingImage7,
-             header: "Rhoncus suspendisse penatibus mauris, sit non",
+            header: "Rhoncus suspendisse penatibus mauris, sit non",
             properties: { bedroom: 1, bath: 1, wifi: true},
             additional: ["City view", "3rd floor", "Elevator", "Parking"],
             availableDate: "28 Nov 2021",
-           price: 3490
+            price: 3490
         },
         {
             coverImage: bookingImage8,
-             header: "Rhoncus suspendisse penatibus mauris, sit non",
+            header: "Rhoncus suspendisse penatibus mauris, sit non",
             properties: { bedroom: 1, bath: 1, wifi: true},
             additional: ["City view", "3rd floor", "Elevator", "Parking"],
             availableDate: "28 Nov 2021",
-           price: 3490
+            price: 3490
         },
         {
             coverImage: bookingImage9,
-             header: "Rhoncus suspendisse penatibus mauris, sit non",
+            header: "Rhoncus suspendisse penatibus mauris, sit non",
             properties: { bedroom: 1, bath: 1, wifi: true},
             additional: ["City view", "3rd floor", "Elevator", "Parking"],
             availableDate: "28 Nov 2021",
-           price: 3490
+            price: 3490
         },
     ]
    
@@ -129,50 +129,52 @@ const Booking = () => {
                     </div>
                 </div>
             </div>
-            <div className="grid grid-cols-1 items-center gap-3 px-2 lg:px-[100px]">
-                <div>
+            <div className="grid grid-cols-12 items-center gap-3 px-2 lg:px-[100px]">
+                <div className="col-span-12 sm:col-span-7  flex justify-start sm:order-last sm:h-full">
                     <MyMap />
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-3">
-                    {
-                        bookingReview.map((item, index) => {
-                            return <div className="grid grid-cols-12">
-                                <img src={item.coverImage} alt={`image-${index}`} className="object-cover w-full h-full col-span-3"/>
-                                <div className="flex flex-col gap-1 w-full col-span-9 p-2 bg-[#F2F0F2] rounded-tr-2xl rounded-br-2xl">
-                                    <h6 className="font-semibold">Rhoncus suspendisse penatibus mauris, sit non</h6>
-                                    <div className="flex gap-2 items-center">
-                                        <div className="gap-1 flex">
-                                            <img src={iconBedRoom} className="h-4"/>
-                                            <span className="text-[10px]">1 bedroom</span>
+                <div className="col-span-12 sm:col-span-5  grid grid-cols-1 gap-3 max-h-[400px] overflow-scroll p-2">
+                    <div className="grid grid-cols-1  gap-3 ">
+                        {
+                            bookingReview.map((item, index) => {
+                                return <div className="grid grid-cols-12">
+                                    <img src={item.coverImage} alt={`image-${index}`} className="object-cover w-full h-full col-span-3"/>
+                                    <div className="flex flex-col gap-1 w-full col-span-9 p-2 bg-[#F2F0F2] rounded-tr-2xl rounded-br-2xl">
+                                        <h6 className="font-semibold">Rhoncus suspendisse penatibus mauris, sit non</h6>
+                                        <div className="flex gap-2 items-center">
+                                            <div className="gap-1 flex">
+                                                <img src={iconBedRoom} className="h-4"/>
+                                                <span className="text-[10px]">1 bedroom</span>
+                                            </div>
+                                            <div className="gap-1 flex">
+                                                <img src={iconBathub} className="h-4"/>
+                                                <span className="text-[10px]">1 bath</span>
+                                            </div>
+                                            <div className="gap-1 flex">
+                                                <img src={iconWifi} className="h-4"/>
+                                                <span className="text-[10px]">WIFI</span>
+                                            </div>
                                         </div>
-                                        <div className="gap-1 flex">
-                                            <img src={iconBathub} className="h-4"/>
-                                            <span className="text-[10px]">1 bath</span>
+                                        <div className="grid grid-cols-3 gap-x-2">
+                                            {
+                                                item.additional.map((subItem, index) => {
+                                                    return <span className={`text-[10px] ${item.additional.length - 1 === index ? '': 'border-r border-r-[#181A18]'}`}>{subItem}</span>
+                                                })
+                                            }
                                         </div>
-                                        <div className="gap-1 flex">
-                                            <img src={iconWifi} className="h-4"/>
-                                            <span className="text-[10px]">WIFI</span>
-                                        </div>
+                                        <CustomButton 
+                                            description={item.availableDate}
+                                            styling="text-white bg-[#49735A] py-2 px-4 rounded-2xl text-sm font-semibold"
+                                        />
+                                        <span className="text-sm">from <b>£{item.price}</b> /month</span>
                                     </div>
-                                    <div className="grid grid-cols-3 gap-x-2">
-                                        {
-                                            item.additional.map((subItem, index) => {
-                                                return <span className={`text-[10px] ${item.additional.length - 1 === index ? '': 'border-r border-r-[#181A18]'}`}>{subItem}</span>
-                                            })
-                                        }
-                                    </div>
-                                    <CustomButton 
-                                        description={item.availableDate}
-                                        styling="text-white bg-[#49735A] py-2 px-4 rounded-2xl text-sm font-semibold"
-                                    />
-                                    <span className="text-sm">from <b>£{item.price}</b> /month</span>
                                 </div>
-                            </div>
-                        })
-                    }
-                </div>
-                <div className="flex justify-center items-center">
-                    <CustomButton description="Show more apartments"/>
+                            })
+                        }
+                    </div>
+                    <div className="flex justify-center items-center">
+                        <CustomButton description="Show more apartments"/>
+                    </div>
                 </div>
             </div>
             <div className="grid grid-cols-1 items-center gap-3 px-2 lg:px-[100px]">
